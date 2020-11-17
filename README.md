@@ -8,7 +8,7 @@ Default Nature journal formatting, with Rmarkdown integration
 An <https://www.overleaf.com/>[Overleaf] account
 
 
-Downloading and configuring:
+*Downloading and configuring:*
 ```
 cd ~
 git clone https://github.com/moodlab/SAMPLE_OVERLEAF_REPO
