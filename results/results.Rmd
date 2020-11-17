@@ -1,0 +1,38 @@
+---
+classoption: notitlepage
+header-includes: 
+  \AtBeginDocument{\let\maketitle\relax}
+  \pagenumbering{gobble}
+mainfont: Helvetica
+sansfont: Courier
+output:
+  pdf_document:
+    keep_tex: yes
+    latex_engine: xelatex
+    toc: false
+    template: template.tex
+  html_document: default
+  css:
+  - custom.css
+---
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+options(Encoding="UTF-8")
+library(reticulate); library(devtools); library(tidyverse); library(bookdown); library(rmarkdown); library(knitr); library(finalfit)
+
+base_dir <- '/Users/derekpisner/Applications/SAMPLE_OVERLEAF_REPO/'
+
+sys = import('sys')
+sys$stdout$flush()
+knitr::opts_chunk$set(comment = NA, fig.path=paste(base_dir, 'figures/', sep=''), fig.show='hide', echo = FALSE, warning=FALSE, error=FALSE, strip.white = TRUE)
+knitr::knit_hooks$set(crop = knitr::hook_pdfcrop)
+```
+
+# Comparing Means Between Groups (EXAMPLE)
+```{r T-test, message=FALSE, warning=FALSE, fig.align="center", echo=FALSE}
+## Classical example: Student's sleep data
+plot(extra ~ group, data = sleep)
+
+out <- t.test(extra ~ group, data = sleep)
+```
+t(`r as.integer(out$parameter[[1]])`) = `r out$statistic[[1]] %>% round(2)`, *p* = `r finalfit::p_tidy(out$p.value, digits = 3, prefix = NULL)`
