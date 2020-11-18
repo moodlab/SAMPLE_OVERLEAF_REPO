@@ -20,7 +20,7 @@ output:
 options(Encoding="UTF-8")
 library(reticulate); library(devtools); library(tidyverse); library(bookdown); library(rmarkdown); library(knitr); library(finalfit)
 
-base_dir <- '/Users/derekpisner/Applications/SAMPLE_OVERLEAF_REPO/'
+base_dir <- paste(Sys.getenv("HOME"), '/SAMPLE_OVERLEAF_REPO/', sep="")
 
 sys = import('sys')
 sys$stdout$flush()
