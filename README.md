@@ -1,7 +1,7 @@
 # SAMPLE_OVERLEAF_REPO
 Default Nature journal formatting, with Rmarkdown integration
 
-*Dependencies*:
+*General Dependencies*:
 
 `RStudio >= v1.2.50`
 
@@ -15,7 +15,7 @@ git clone https://github.com/moodlab/SAMPLE_OVERLEAF_REPO
 ```
 
 
-*Installation*:
+*RStudio Dependency Installation*:
 ```
 install.packages("reticulate", "devtools", "tidyverse", "bookdown", "rmarkdown", "knitr", "finalfit")
 ```
