@@ -5,7 +5,7 @@ Default Nature journal formatting, with Rmarkdown integration
 
 `RStudio >= v1.2.50`
 
-An (https://www.overleaf.com/)[Overleaf] account
+An [Overleaf](<https://www.overleaf.com/>) account
 
 
 *Downloading and configuring:*
